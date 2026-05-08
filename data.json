@@ -16,6 +16,13 @@
     { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin" },
     { "platform": "Twitter",  "url": "https://twitter.com",  "icon": "twitter" }
   ],
-  "members": [],
+  "members": [
+    { "name": "Aysun", "role": "Navbar + Footer" },
+    { "name": "Rashad", "role": "Hero Section" },
+    { "name": "Umid", "role": "About Team Section" },
+    { "name": "Imameli", "role": "Team Members Section" },
+    { "name": "Javidan", "role": "Projects Section" },
+    { "name": "Nasir", "role": "Contact" }
+  ],
   "projects": []
 }
