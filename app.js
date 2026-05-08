@@ -108,7 +108,31 @@ function initNavbar(data) {
 }
 
 /* ──────────────────────────────────────────────────────────
-   3. Footer
+   3. Team Members
+   ────────────────────────────────────────────────────────── */
+function initTeamMembers(data) {
+  const teamGrid = document.getElementById('team-grid');
+  const members = data?.members || [];
+
+  if (!teamGrid || members.length === 0) return;
+
+  teamGrid.innerHTML = members
+    .map(({ name, role }) => `
+      <div class="team-card">
+        <div class="team-card-image">
+          <span class="team-initial">${name.charAt(0).toUpperCase()}</span>
+        </div>
+        <div class="team-card-content">
+          <h3 class="team-card-name">${name}</h3>
+          <p class="team-card-role">${role}</p>
+        </div>
+      </div>
+    `)
+    .join('');
+}
+
+/* ──────────────────────────────────────────────────────────
+   4. Footer
    ────────────────────────────────────────────────────────── */
 function initFooter(data) {
   const taglineEl    = document.getElementById('footer-tagline');
@@ -125,12 +149,12 @@ function initFooter(data) {
     youtube:   'fa-brands fa-youtube',
   };
 
-  // 3a. Tagline
+  // 5a. Tagline
   if (taglineEl && data?.team?.tagline) {
     taglineEl.textContent = data.team.tagline;
   }
 
-  // 3b. Social icon links
+  // 5b. Social icon links
   if (socialEl && data?.social?.length) {
     socialEl.innerHTML = data.social
       .map(({ platform, url, icon }) =>
@@ -142,31 +166,32 @@ function initFooter(data) {
       .join('');
   }
 
-  // 3c. Footer nav links
+  // 5c. Footer nav links
   if (navLinksEl && data?.nav?.length) {
     navLinksEl.innerHTML = data.nav
       .map(({ label, href }) => `<li><a href="${href}">${label}</a></li>`)
       .join('');
   }
 
-  // 3d. Copyright line
+  // 5d. Copyright line
   if (copyEl && data?.team) {
     const year = new Date().getFullYear();
     copyEl.innerHTML =
       `© ${year} <span>${data.team.name}</span>. Built with ❤️ at the Git Workshop.`;
   }
 
-  // 3e. Back to top
+  // 5e. Back to top
   backToTopBtn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
 /* ──────────────────────────────────────────────────────────
-   4. Bootstrap
+   6. Bootstrap
    ────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await loadData();
   initNavbar(data);
+  initTeamMembers(data);
   initFooter(data);
 });

@@ -525,6 +525,129 @@ main { padding-top: var(--nav-h); }
 .back-to-top i { font-size: 10px; }
 
 /* ═══════════════════════════════════════════════════════════
+   TEAM SECTION
+   ══════════════════════════════════════════════════════════ */
+
+.team-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 40px;
+}
+
+.team-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 500px;
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: 12px;
+  transition: background var(--t), border-color var(--t), transform var(--t), box-shadow var(--t);
+  cursor: pointer;
+}
+
+.team-card:hover {
+  background: var(--raise);
+  border-color: var(--lime);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(179, 255, 78, 0.08);
+}
+
+/* ── Image ───────────────────────────────────────────────– */
+.team-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--lime);
+  border-radius: 50%;
+  background: var(--raise);
+  flex-shrink: 0;
+}
+
+.team-initial {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: -0.02em;
+}
+
+.team-card:hover .team-card-image {
+  box-shadow: 0 0 20px rgba(179, 255, 78, 0.3);
+}
+
+/* ── Content ─────────────────────────────────────────────── */
+.team-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.team-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.team-card-role {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.team-card:hover .team-card-role {
+  color: var(--lime);
+}
+
+/* ═══════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════ */
 
@@ -541,10 +664,21 @@ main { padding-top: var(--nav-h); }
 
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { padding: 18px 24px; }
+
+  .team-section { padding: 60px 24px; }
+  .section-title { font-size: 36px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
 
 @media (max-width: 600px) {
   .footer-container { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px 40px; }
   .footer-bottom { flex-direction: column-reverse; gap: 14px; text-align: center; padding: 18px 20px; }
   .mobile-nav-links li a { font-size: 24px; padding: 10px 40px; }
+
+  .team-section { padding: 48px 20px; }
+  .section-header { margin-bottom: 48px; }
+  .section-title { font-size: 28px; }
+  .team-grid { grid-template-columns: 1fr; gap: 16px; }
+  .team-card { padding: 20px; }
+  .team-card-image { width: 100px; height: 100px; }
 }
