@@ -1,0 +1,28 @@
+{
+  "team": {
+    "name": "MergePoint",
+    "tagline": "Building together, one commit at a time. Four developers, one shared vision.",
+    "logo": "MP"
+  },
+  "nav": [
+    { "label": "Home",     "href": "#home" },
+    { "label": "About",    "href": "#about" },
+    { "label": "Team",     "href": "#team" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contact",  "href": "#contact" }
+  ],
+  "social": [
+    { "platform": "GitHub",   "url": "https://github.com",   "icon": "github" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin" },
+    { "platform": "Twitter",  "url": "https://twitter.com",  "icon": "twitter" }
+  ],
+  "members": [
+    { "name": "Aysun", "role": "Navbar + Footer" },
+    { "name": "Rashad", "role": "Hero Section" },
+    { "name": "Umid", "role": "About Team Section" },
+    { "name": "Imameli", "role": "Team Members Section" },
+    { "name": "Javidan", "role": "Projects Section" },
+    { "name": "Nasir", "role": "Contact" }
+  ],
+  "projects": []
+}
