@@ -1,28 +1,142 @@
 {
   "team": {
     "name": "MergePoint",
-    "tagline": "Building together, one commit at a time. Four developers, one shared vision.",
+    "tagline": "A six-person team portfolio website built through feature branches, pull requests, code review, and final integration.",
     "logo": "MP"
   },
+  "hero": {
+    "title": "Team Portfolio Website",
+    "subtitle": "A collaborative Git workshop project where students practice branching, pull requests, merges, and conflict resolution on a real frontend build.",
+    "primaryCta": {
+      "label": "View Projects",
+      "href": "#projects"
+    },
+    "secondaryCta": {
+      "label": "See Workflow",
+      "href": "#about"
+    }
+  },
   "nav": [
-    { "label": "Home",     "href": "#home" },
-    { "label": "About",    "href": "#about" },
-    { "label": "Team",     "href": "#team" },
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Team", "href": "#team" },
     { "label": "Projects", "href": "#projects" },
-    { "label": "Contact",  "href": "#contact" }
+    { "label": "Contact", "href": "#contact" }
   ],
-  "social": [
-    { "platform": "GitHub",   "url": "https://github.com",   "icon": "github" },
-    { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin" },
-    { "platform": "Twitter",  "url": "https://twitter.com",  "icon": "twitter" }
+  "goals": [
+    "Create feature branches from the dev branch.",
+    "Submit changes through pull requests.",
+    "Review teammate code before merging.",
+    "Resolve merge conflicts in shared files.",
+    "Merge dev into main after final integration."
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Clone and Branch",
+      "description": "Clone the repository, switch to dev, and create a feature branch for the assigned section."
+    },
+    {
+      "step": "02",
+      "title": "Build Section",
+      "description": "Implement the assigned navbar, hero, team, projects, footer, or contact area."
+    },
+    {
+      "step": "03",
+      "title": "Open Pull Request",
+      "description": "Push the branch to GitHub and create a pull request into dev for review."
+    },
+    {
+      "step": "04",
+      "title": "Merge and Resolve",
+      "description": "Merge approved work, resolve conflicts, then integrate dev into main."
+    }
   ],
   "members": [
-    { "name": "Aysun", "role": "Navbar + Footer" },
-    { "name": "Rashad", "role": "Hero Section" },
-    { "name": "Umid", "role": "About Team Section" },
-    { "name": "Imameli", "role": "Team Members Section" },
-    { "name": "Javidan", "role": "Projects Section" },
-    { "name": "Nasir", "role": "Contact" }
+    {
+      "name": "Aysun",
+      "role": "Navbar + Footer",
+      "task": "Create the navbar, logo, navigation links, mobile menu, and footer.",
+      "branch": "aysun"
+    },
+    {
+      "name": "Rashad",
+      "role": "Hero Section",
+      "task": "Create the hero section with title, subtitle, and button.",
+      "branch": "rashad"
+    },
+    {
+      "name": "Umid",
+      "role": "About Team Section",
+      "task": "Create the about team section with team description, team goals, images, and content.",
+      "branch": "umid"
+    },
+    {
+      "name": "Imameli",
+      "role": "Team Members Section",
+      "task": "Create team member cards with name, role, and image.",
+      "branch": "imameli"
+    },
+    {
+      "name": "Javidan",
+      "role": "Projects Section",
+      "task": "Create the projects section with project cards, descriptions, and links.",
+      "branch": "javidan"
+    },
+    {
+      "name": "Nasir",
+      "role": "Contact Section",
+      "task": "Create the contact section and add social/contact links.",
+      "branch": "nasir"
+    }
   ],
-  "projects": []
+  "projects": [
+    {
+      "title": "Navbar + Footer",
+      "description": "A responsive navbar with logo, navigation links, mobile menu, and a footer for workshop links and branding.",
+      "icon": "fa-solid fa-bars-staggered",
+      "owner": "Aysun",
+      "status": "aysun"
+    },
+    {
+      "title": "Hero Section",
+      "description": "A first-screen section with title, subtitle, and button that introduces the team portfolio project.",
+      "icon": "fa-solid fa-bullseye",
+      "owner": "Rashad",
+      "status": "rashad"
+    },
+    {
+      "title": "About Team",
+      "description": "A section with team description, collaboration goals, and supporting images or content.",
+      "icon": "fa-solid fa-people-group",
+      "owner": "Umid",
+      "status": "umid"
+    },
+    {
+      "title": "Team Members",
+      "description": "Team member cards with each contributor's name, role, image, and feature branch responsibility.",
+      "icon": "fa-solid fa-user-group",
+      "owner": "Imameli",
+      "status": "imameli"
+    },
+    {
+      "title": "Projects Section",
+      "description": "Project cards with descriptions and links that show the portfolio work delivered by the team.",
+      "icon": "fa-solid fa-layer-group",
+      "owner": "Javidan",
+      "status": "javidan"
+    },
+    {
+      "title": "Contact Section",
+      "description": "A contact area with a form plus social and contact links for reaching the team.",
+      "icon": "fa-solid fa-address-card",
+      "owner": "Nasir",
+      "status": "nasir"
+    }
+  ],
+  "social": [
+    { "platform": "GitHub", "url": "https://github.com", "icon": "github" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin" },
+    { "platform": "Twitter", "url": "https://twitter.com", "icon": "twitter" }
+  ]
 }
