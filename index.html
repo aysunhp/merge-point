@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MergePoint – Team Portfolio</title>
+  <title>MergePoint - Team Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,8 +12,7 @@
 </head>
 <body>
   <header id="navbar">
-    <nav class="nav-container">
-
+    <nav class="nav-container" aria-label="Primary navigation">
       <a href="#home" class="nav-logo" id="nav-logo">
         <span class="logo-mark">MP</span>
         <span class="logo-text">MergePoint</span>
@@ -23,55 +22,170 @@
         <!-- Rendered by app.js from data.json -->
       </ul>
 
-      <button class="nav-cta" id="nav-cta">Contact Us</button>
+      <button class="nav-cta" id="nav-cta" type="button">Contact Us</button>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
     </nav>
   </header>
 
-  <div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true">
     <ul class="mobile-nav-links" id="mobile-nav-links">
+      <!-- Rendered by app.js from data.json -->
     </ul>
   </div>
 
   <main>
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-copy">
+          <p class="section-kicker">Git Branching Workshop</p>
+          <h1 id="hero-title">Team Portfolio Website</h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            A collaborative portfolio project for practicing feature branches, pull requests, merges, and conflict resolution.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" id="hero-primary-cta" href="#projects">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>View Projects</span>
+            </a>
+            <a class="secondary-btn" id="hero-secondary-cta" href="#about">
+              <i class="fa-solid fa-code-branch"></i>
+              <span>See Workflow</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Git workflow preview">
+          <div class="branch-card branch-main">
+            <span class="branch-label">main</span>
+            <strong>Stable production</strong>
+          </div>
+          <div class="branch-card branch-dev">
+            <span class="branch-label">dev</span>
+            <strong>Integration branch</strong>
+          </div>
+          <div class="branch-list" id="branch-list">
+            <!-- Rendered by app.js from data.json -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="content-container">
+        <div class="section-header align-left">
+          <p class="section-kicker">About Team</p>
+          <h2 class="section-title">One website, six focused branches.</h2>
+          <p class="section-subtitle">
+            MergePoint turns a small portfolio build into a practical collaboration exercise. Each teammate owns one section, opens a pull request, reviews changes, and resolves conflicts before the final merge.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-panel">
+            <h3>Branching Model</h3>
+            <div class="branch-flow">
+              <div><span>main</span><small>stable production branch</small></div>
+              <i class="fa-solid fa-arrow-right"></i>
+              <div><span>dev</span><small>development integration branch</small></div>
+              <i class="fa-solid fa-arrow-right"></i>
+              <div><span>name</span><small>individual work branch</small></div>
+            </div>
+          </div>
+
+          <div class="about-panel">
+            <h3>Workshop Goals</h3>
+            <ul class="goal-list" id="goal-list">
+              <!-- Rendered by app.js from data.json -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="workflow-strip" id="workflow-strip">
+          <!-- Rendered by app.js from data.json -->
+        </div>
+      </div>
+    </section>
+
     <section id="team" class="team-section">
-      <div class="team-container">
+      <div class="content-container">
         <div class="section-header">
-          <h2 class="section-title">Meet Our Team</h2>
-          <p class="section-subtitle">The talented developers behind MergePoint</p>
+          <p class="section-kicker">Team Members</p>
+          <h2 class="section-title">Meet the contributors</h2>
+          <p class="section-subtitle">Each card represents a workshop role and a feature branch owner.</p>
         </div>
         <div class="team-grid" id="team-grid">
           <!-- Rendered by app.js from data.json -->
         </div>
       </div>
     </section>
+
+    <section id="projects" class="projects-section">
+      <div class="content-container">
+        <div class="section-header align-left">
+          <p class="section-kicker">Projects</p>
+          <h2 class="section-title">Portfolio sections delivered through pull requests</h2>
+          <p class="section-subtitle">
+            The project list shows the exact work units students can split across feature branches and review before merging into dev.
+          </p>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Rendered by app.js from data.json -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="content-container contact-layout">
+        <div class="section-header align-left">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Ready for review.</h2>
+          <p class="section-subtitle">
+            Use this section as the final integration checkpoint: confirm each branch is merged, review the shared page, and prepare the dev to main merge.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Share a question or review note" required></textarea>
+          </label>
+          <button class="primary-btn" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer id="footer">
-    <div class="footer-glow"></div>
-
     <div class="footer-container">
       <div class="footer-brand">
         <a href="#home" class="nav-logo footer-logo">
           <span class="logo-mark">MP</span>
           <span class="logo-text">MergePoint</span>
         </a>
-        <p class="footer-tagline" id="footer-tagline">
-        </p>
-        <div class="footer-social" id="footer-social">
-        </div>
+        <p class="footer-tagline" id="footer-tagline"></p>
+        <div class="footer-social" id="footer-social"></div>
       </div>
 
       <div class="footer-col">
         <h4 class="footer-col-title">Quick Links</h4>
-        <ul class="footer-links" id="footer-nav-links">
-        </ul>
+        <ul class="footer-links" id="footer-nav-links"></ul>
       </div>
 
       <div class="footer-col">
@@ -80,16 +194,14 @@
           <li><i class="fa-solid fa-code-branch"></i><span>Git Branching</span></li>
           <li><i class="fa-solid fa-code-pull-request"></i><span>Pull Requests</span></li>
           <li><i class="fa-solid fa-users"></i><span>Team Collaboration</span></li>
-          <li><i class="fa-solid fa-arrows-merge"></i><span>Conflict Resolution</span></li>
+          <li><i class="fa-solid fa-code-merge"></i><span>Conflict Resolution</span></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy" id="footer-copy">
-      </p>
-      <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <p class="footer-copy" id="footer-copy"></p>
+      <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
         <span>Back to top</span>
       </button>
